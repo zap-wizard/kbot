@@ -89,7 +89,7 @@ class Kahoot:
                     elif kind == 'RESET_CONTROLLER' or kind == 'GAME_OVER':
                         await client.close()
                         exit()
-                    print(kind)
+                    print(kind.replace('_', ' '))
 
     async def sendAnswer(self, choice):
         choiceInfo = json.dumps({"choice": choice, "meta": {"lag": 0, "device": {"userAgent": "kbot", "screen": {"width": 1920, "height": 1080}}}})
